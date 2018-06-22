@@ -7,7 +7,7 @@ class Flat extends Component {
     }
 
     return(
-      <div className="card" style={style} >
+      <div className="flat card" style={style} >
         <div className="card-description">
           <h2> {this.props.flat.name} </h2>
           <p> {this.props.flat.price} {this.props.flat.priceCurrency} </p>
