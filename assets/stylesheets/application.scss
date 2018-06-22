@@ -1,3 +1,8 @@
 body {
   font-family: Helvetica;
 }
+
+.flat_list {
+  display: flex;
+  flex-wrap: wrap;
+}
