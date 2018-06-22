@@ -1,0 +1,9 @@
+A container is a smart component and has direct access to one or several pieces of the Redux state.
+
+A component is dumb and is just a React component that doesn't need access to the Redux state tree.
+
+Inside this app:
+
+1. The map is a container (needs info from the Redux state tree)
+2. Flat is a container because there's an action (changing the flat when clicked on new one)
+3. The entire app is just a component (it needs no access to the Redux state tree)
