@@ -7,3 +7,32 @@ Inside this app:
 1. The map is a container (needs info from the Redux state tree)
 2. Flat is a container because there's an action (changing the flat when clicked on new one)
 3. The entire app is just a component (it needs no access to the Redux state tree)
+
+
+Provider
+You import the provider and put it around the App.
+
+Store
+The store we give to the provider is built from the createStore method which we get from the Redux library.
+
+Reducer combination
+The store needs reducers to work. We create one reducer for every key in the Redux state tree and combine those reducers to pass to the store. That's why you need the combineReducers as well.
+
+Redux state tree
+Our Redux state tree has flats. The flats are handled by the flatsReducer. The flatsReducer's job is to handle this part of the Redux state tree. For every key in the Redux state tree you have a single reducer. The reducer we import from the reducer folder.
+
+Question: In the lecture 'Basic Redux' when we are building a reducer and action for flat, why are we naming the files suddenly with extension .js instead of .jsx what we did to the all the other files we made before?
+
+When I now rename my files to extension .js I get the following error in the console:
+"Uncaught Error: Module build failed: Error: ENOENT: no such file or directory, open '/Users/owenmoss/code/OKMantis/staticairbnb-redux/src/reducers/flat_reducer.jsx'"
+
+Question: At the moment when reducer and action are created like in the lecture, I still get the following error which I don't understand: "invariant.js:42 Uncaught Error: Target container is not a DOM element.
+    at invariant (invariant.js:42)
+    at renderSubtreeIntoContainer (react-dom.development.js:15180)
+    at Object.render (react-dom.development.js:15290)
+    at Object../src/index.jsx (index.jsx:17)
+    at __webpack_require__ (bootstrap:19)
+    at Object.0 (bundle.js:31017)
+    at __webpack_require__ (bootstrap:19)
+    at bootstrap:68
+    at bootstrap:68"
