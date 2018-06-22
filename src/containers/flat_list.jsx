@@ -13,6 +13,11 @@ class FlatList extends Component {
     }]
   }
 
+  componentWillMount() {
+    // TODO: dispatch an action to update the Redux state
+    // tree (flats)
+  }
+
   render() {
     return(
       <div className="flat-list col-sm-7">
