@@ -7,7 +7,7 @@ import { setFlats } from '../actions';
 // Above is importing the setFlats action so it can be
 // used by mapDispatchToProps function.
 
-import Flat from '../components/flat';
+import Flat from './flat';
 
 class FlatList extends Component {
 
@@ -31,8 +31,8 @@ class FlatList extends Component {
 
 function mapDispatchToProps(dispatch) {
  return bindActionCreators(
- { setFlats: setFlats },
- dispatch
+   { setFlats: setFlats },
+   dispatch
  );
 }
 // Above this function is made to wire the action setFlats
@@ -40,7 +40,7 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
  return {
- flats: state.flats
+  flats: state.flats
  };
 }
 // Above we're mapping the Redux state from the external
