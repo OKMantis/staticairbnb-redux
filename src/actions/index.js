@@ -13,3 +13,16 @@ export function setFlats() {
   // setFlats does an API call and returns the action
   // SET_FLATS with the payload flats.
   // Next thing happens inside flat_reducer...
+
+
+export function selectFlat(flat) {
+  return {
+    type: 'SELECT_FLAT',
+    payload: flat
+  }
+}
+
+// The action creator 'handleClick' in flat.jsx (line 6)
+// returns an action with a type and payload.
+// The action flows through all the reducers
+// (go to ../reducers/selected_flat_reducer.js).
