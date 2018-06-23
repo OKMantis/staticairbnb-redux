@@ -13,4 +13,8 @@ body {
  border: 6px solid transparent;
 }
 
+.flat.selected {
+ border: 6px dashed red;
+}
+
 @import "card";
