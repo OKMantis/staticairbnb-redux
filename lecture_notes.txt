@@ -21,3 +21,9 @@ The store needs reducers to work. We create one reducer for every key in the Red
 Redux state tree
 Our Redux state tree has flats. The flats are handled by the flatsReducer. The flatsReducer's job is to handle this part of the Redux state tree. For every key in the Redux state tree you have a single reducer. The reducer we import from the reducer folder.
 
+The key things to understand is that now the dynamic information lives in Redux and we need a way to connect this information back to the component. This is done thanks to the mapStateToProps and the mapDispatchToProps and the connect helper. And then from the component what you can do is run actions and the actions will trigger maybe API codes or some stuff, it will pass reducers and the reducers will update the store.
+
+Components now don't depend on their parents passing callbacks. Now you have this external store and external actions and every component can import the action they want and they don't have to rely on the parent to pass the information. This way the components are more reusable. It's easier to drop a component anywhere without worrying about the parent passing the right information. Now the only thing you need to make sure is that the component is at the right place, because the props of the component usually now will come from Redux state and not from the parents.
+
+Redux state is the single source of truth for data.
+
