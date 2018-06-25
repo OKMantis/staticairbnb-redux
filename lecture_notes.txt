@@ -27,3 +27,35 @@ Components now don't depend on their parents passing callbacks. Now you have thi
 
 Redux state is the single source of truth for data.
 
+Redux Advanced
+
+Middleware: A function that takes an action and  an do something before it reaches any reducer. Middleware are in between the Action Creator and the Reducer and can change the action before it reaches the reducer.
+
+Middleware 1: Redux logger
+
+It will bring to the console (Chrome) a log, a new line, every time when an action has been triggered.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
