@@ -35,6 +35,14 @@ Middleware 1: Redux logger
 
 It will bring to the console (Chrome) a log, a new line, every time when an action has been triggered.
 
+Fetch
+Is the builtin function in browsers to do an Ajax request. It's used to call an API.
+
+The fetch function returns a promise. A promise is some code that is going to be executed in some time. Ajax request triggers a http call, and when http call comes back then you need to act on the answer of the http request. So the promise here to chain the code you want to do after receive the http request. That's the concept of asynchronisity.
+
+Middleware 2: Redux Promise
+
+When you use a normal fetch request (see index.js line 9) it will return a promise, but returning a action in the fetch request on its own is then not enough, because what Redux is seeing now is a promise. It's not the action that I'm building the callback. So we need a way to tell Redux if you see promise, you have to resolve this promise and take whatever I put in the callback (return). For this you need custom middleware called Redux Promise.
 
 
 
