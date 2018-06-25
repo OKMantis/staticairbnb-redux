@@ -1,12 +1,21 @@
 import flats from '../flats';
 export function setFlats() {
- // TODO: Api call! For now, simulate a DB
 
- return {
-   type: 'SET_FLATS',
-   payload: flats // this is inside flats.js
- }
+ // return {
+ //   type: 'SET_FLATS',
+ //   payload: flats // this is inside flats.js
+ // }
+
+  const promise = fetch('https://raw.githubusercontent.com/[..]flats.json')
+    .then(response => response.json());
+
+  return {
+    type: 'SET_FLATS',
+    payload: promise
+  };
 }
+
+// Above the API call thru fetch and using Redux Promise middleware.
 
 // 2. Function setFlats is triggered by componentWillMount function
   // inside the container flat_list.jsx (line 14).

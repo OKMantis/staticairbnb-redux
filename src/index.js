@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { logger } from 'redux-logger';
+import reduxPromise from 'redux-promise';
 
 import '../assets/stylesheets/application.scss';
 
@@ -14,7 +15,7 @@ const reducers = combineReducers({
  selectedFlat: selectedFlatReducer
 });
 
-const middlewares = applyMiddleware(logger);
+const middlewares = applyMiddleware(logger, reduxPromise);
 
 import App from './components/app';
 
